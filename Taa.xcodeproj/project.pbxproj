@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822FFC30286E887400134DF8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FFC2F286E887400134DF8 /* ProfileView.swift */; };
+		822FFC33286E88E800134DF8 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FFC32286E88E800134DF8 /* ProfileImage.swift */; };
 		8266FB32286E5C070083FC60 /* TaaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266FB31286E5C070083FC60 /* TaaApp.swift */; };
 		8266FB34286E5C070083FC60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266FB33286E5C070083FC60 /* ContentView.swift */; };
 		8266FB36286E5C0B0083FC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8266FB35286E5C0B0083FC60 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 		8266FB43286E5C0B0083FC60 /* TaaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266FB42286E5C0B0083FC60 /* TaaTests.swift */; };
 		8266FB4D286E5C0B0083FC60 /* TaaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266FB4C286E5C0B0083FC60 /* TaaUITests.swift */; };
 		8266FB4F286E5C0B0083FC60 /* TaaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266FB4E286E5C0B0083FC60 /* TaaUITestsLaunchTests.swift */; };
+		82BD29B5286E9B11008DDF22 /* UpcomingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BD29B4286E9B11008DDF22 /* UpcomingPlan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		822FFC2F286E887400134DF8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		822FFC32286E88E800134DF8 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		8266FB2E286E5C070083FC60 /* Taa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8266FB31286E5C070083FC60 /* TaaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaaApp.swift; sourceTree = "<group>"; };
 		8266FB33286E5C070083FC60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,7 @@
 		8266FB48286E5C0B0083FC60 /* TaaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8266FB4C286E5C0B0083FC60 /* TaaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaaUITests.swift; sourceTree = "<group>"; };
 		8266FB4E286E5C0B0083FC60 /* TaaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		82BD29B4286E9B11008DDF22 /* UpcomingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPlan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		822FFC2D286E85C700134DF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				822FFC2E286E85D900134DF8 /* Profile */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		822FFC2E286E85D900134DF8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				822FFC31286E887800134DF8 /* SubViews */,
+				822FFC2F286E887400134DF8 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		822FFC31286E887800134DF8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				822FFC32286E88E800134DF8 /* ProfileImage.swift */,
+				82BD29B4286E9B11008DDF22 /* UpcomingPlan.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		8266FB25286E5C070083FC60 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +126,7 @@
 		8266FB30286E5C070083FC60 /* Taa */ = {
 			isa = PBXGroup;
 			children = (
+				822FFC2D286E85C700134DF8 /* Views */,
 				8266FB31286E5C070083FC60 /* TaaApp.swift */,
 				8266FB33286E5C070083FC60 /* ContentView.swift */,
 				8266FB35286E5C0B0083FC60 /* Assets.xcassets */,
@@ -258,6 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8266FB34286E5C070083FC60 /* ContentView.swift in Sources */,
+				82BD29B5286E9B11008DDF22 /* UpcomingPlan.swift in Sources */,
+				822FFC33286E88E800134DF8 /* ProfileImage.swift in Sources */,
+				822FFC30286E887400134DF8 /* ProfileView.swift in Sources */,
 				8266FB32286E5C070083FC60 /* TaaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
