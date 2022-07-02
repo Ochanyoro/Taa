@@ -38,7 +38,7 @@ struct ProfileImage: View {
   
             
             VStack{
-                Text("2")
+                Text("3")
                     .font(.headline)
                     .foregroundColor(Color.black)
                 
