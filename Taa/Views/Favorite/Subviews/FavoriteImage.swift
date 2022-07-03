@@ -18,7 +18,7 @@ struct FavoriteImage: View {
                         Image(uiImage: favorite.image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: screen.size.width/3, height: screen.size.width/3)
+                            .frame(width: screen.size.width/3.4, height: screen.size.width/3.4)
                             .clipped()
                             .cornerRadius(5)
                             .overlay(
@@ -33,6 +33,22 @@ struct FavoriteImage: View {
                                     .padding(.leading,5)
                                     .padding(.bottom,5)
                                 ,alignment: .bottomLeading)
+                        
+                            .overlay(
+                                
+                                HStack(spacing:0) {
+                                    Spacer()
+                                    Text("東京:")
+                                        .font(.system(size: 6.5))
+                                        .fontWeight(.bold)
+                                    Text("18km")
+                                        .font(.system(size: 6.5))
+                                        .fontWeight(.bold)
+                                }
+                                    .foregroundColor(Color.white)
+                                    .padding(.trailing,2)
+                                .padding(.bottom,3)
+                                ,alignment: .bottomTrailing)
                         
                         HStack(spacing:0) {
                             Text("竹中食堂")
@@ -50,13 +66,14 @@ struct FavoriteImage: View {
                                 .cornerRadius(3)
                              
                             }
-                        .padding(.horizontal,2)
+                        .padding(.horizontal,10)
+                        
                         
                     }
-                    .frame(width: screen.width/3, height: screen.width/3 + 15 ,alignment: .top)
-                    .padding(.vertical,15)
-                    .padding(.leading,10)
-                    .padding(.trailing,-7)
+                    .frame(width: screen.width/3.2, height: screen.width/3.2 ,alignment: .center)
+                    .padding(.vertical,13)
+                    .padding(.leading,5)
+                    .padding(.trailing,-15)
                     
             }
         }

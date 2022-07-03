@@ -15,7 +15,7 @@ struct FavoriteView: View {
     
     
     var body: some View {
-        VStack(alignment: .leading,spacing: 5) {
+        VStack(alignment: .leading,spacing: 3) {
             
             HStack(spacing:2) {
                 Text("cafe")
@@ -26,7 +26,7 @@ struct FavoriteView: View {
                     .font(.system(size: 14))
                     .padding(.top,2)
                 Spacer()
-            }
+            }.opacity(0.8)
             
             ScrollView(.horizontal) {
                 
@@ -42,9 +42,6 @@ struct FavoriteView: View {
 }
 
 struct FavoriteView_Previews: PreviewProvider {
-    
-    static let favorite:FavoriteModel = exampleFavorite
-    
     static var previews: some View {
         FavoriteView()
     }
