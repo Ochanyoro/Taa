@@ -23,20 +23,6 @@ func getDateString(value: Int) -> String {
     return dateStr
 }
 
-/*let modifiedDate1 = Calendar.current.date(byAdding: .day, value: 1, to: day)!
-let modifiedDate2 = Calendar.current.date(byAdding: .day, value: 8, to: day)!
-let modifiedDate3 = Calendar.current.date(byAdding: .day, value: 10, to: day)!
-let modifiedDate4 = Calendar.current.date(byAdding: .day, value: 11, to: day)!
-let modifiedDate5 = Calendar.current.date(byAdding: .day, value: 15, to: day)!
- */
-
-
-
-//let day = Calendar
-  //  .current.dateComponents([.year, .month, .day],
-    //                            from:today)
-
-
 
 let exampleSchedule1 = ScheduleModel(
     id: UUID().uuidString,
@@ -99,7 +85,7 @@ let exampleSchedule5 = ScheduleModel(
 )
 
 
-let exampleFavorite = FavoriteModel(
+let exampleFavorite1 = FavoriteModel(
     id: UUID().uuidString,
     userID: "1",
     username: "Kaho",
@@ -108,9 +94,79 @@ let exampleFavorite = FavoriteModel(
     recommendRate: 5.0
 )
 
+let exampleFavorite2 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "backbround1")!,
+    recommendRate: 5.0
+)
+let exampleFavorite3 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "background2")!,
+    recommendRate: 5.0
+)
+let exampleFavorite4 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "hangOut")!,
+    recommendRate: 5.0
+)
+let exampleFavorite5 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "fireworks")!,
+    recommendRate: 5.0
+)
+let exampleFavorite6 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "lunch")!,
+    recommendRate: 5.0
+)
+let exampleFavorite7 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "lunch")!,
+    recommendRate: 5.0
+)
+let exampleFavorite8 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "fireworks")!,
+    recommendRate: 5.0
+)
+let exampleFavorite9 = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "top")!,
+    recommendRate: 5.0
+)
 
 
 var exampleSchedules: [ScheduleModel] {
     return [exampleSchedule1,exampleSchedule2,exampleSchedule3,exampleSchedule4,exampleSchedule5,]
 }
+
+var exampleFavorites: [FavoriteModel] {
+    return [exampleFavorite1,exampleFavorite2,exampleFavorite3,exampleFavorite4,exampleFavorite5,exampleFavorite6,exampleFavorite7,exampleFavorite8,exampleFavorite9]
+}
+
+
 

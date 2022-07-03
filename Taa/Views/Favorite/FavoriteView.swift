@@ -11,7 +11,7 @@ struct FavoriteView: View {
     
     @State var screen = UIScreen.main.bounds
     
-    let favorite:FavoriteModel = exampleFavorite
+    let favorite:FavoriteModel = exampleFavorite1
     
     
     var body: some View {
@@ -36,7 +36,7 @@ struct FavoriteView: View {
                     }
                 }
             }
-            .background(Color(red: 0.953, green: 0.651, blue: 0.549,opacity: 0.07))
+            .background(Color(red: 0.956, green: 0.856, blue: 0.698,opacity: 0.05))
         }
     }
 }

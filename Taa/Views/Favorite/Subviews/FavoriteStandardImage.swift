@@ -1,24 +1,24 @@
 //
-//  FavoriteImage.swift
+//  FavoriteStandardImage.swift
 //  Taa
 //
-//  Created by 大和田一裕 on 2022/07/03.
+//  Created by 大和田一裕 on 2022/07/04.
 //
 
 import SwiftUI
 
-struct FavoriteImage: View {
-    @State var screen = UIScreen.main.bounds
+struct FavoriteStandardImage: View {
+    
     @State var favorite: FavoriteModel
-        
-        var body: some View {
-               
-                    
-                    VStack(spacing:4) {
+    
+    var body: some View {
+            
+                GeometryReader { proxy in
+                    VStack(spacing:4){
                         Image(uiImage: favorite.image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: screen.size.width/3.4, height: screen.size.width/3.4)
+                            .frame(width: proxy.size.width, height: proxy.size.height)
                             .clipped()
                             .cornerRadius(5)
                             .overlay(
@@ -52,39 +52,34 @@ struct FavoriteImage: View {
                         
                         HStack(spacing:0) {
                             Text("竹中食堂")
-                                .font(.footnote)
+                                .font(.system(size: 11))
                                 .foregroundColor(Color.black.opacity(0.4))
-                                .padding(.trailing, 4)
+                            
                             
                             
                             Spacer()
                             
                             Text("食堂")
-                                .font(.system(size: 8))
+                                .font(.system(size: 7))
                                 .padding(2)
                                 .background(Color.gray.opacity(0.3))
                                 .cornerRadius(3)
                              
                             }
-                        .padding(.horizontal,10)
-                        
-                        
+                        .padding(.horizontal,5)
                     }
-                    .frame(width: screen.width/3.2, height: screen.width/3.2 ,alignment: .center)
-                    .padding(.vertical,13)
-                    .padding(.leading,5)
-                    .padding(.trailing,-15)
-                    
-            }
         }
+    }
+}
 
-struct FavoriteImage_Previews: PreviewProvider {
+struct FavoriteStandardImage_Previews: PreviewProvider {
     
+    static var favorite: FavoriteModel = exampleFavorite1
     
-    static var favorite:FavoriteModel = exampleFavorite1
+    static var screen = UIScreen.main.bounds
     
     static var previews: some View {
-        FavoriteImage(favorite: favorite)
-            
+        FavoriteStandardImage(favorite: favorite)
+            .frame(width: screen.width/3,height: screen.width/3)
     }
 }
