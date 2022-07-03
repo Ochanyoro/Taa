@@ -99,6 +99,14 @@ let exampleSchedule5 = ScheduleModel(
 )
 
 
+let exampleFavorite = FavoriteModel(
+    id: UUID().uuidString,
+    userID: "1",
+    username: "Kaho",
+    createDate: Date(),
+    image: UIImage(named: "lunch")!,
+    recommendRate: 5.0
+)
 
 
 
