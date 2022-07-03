@@ -8,16 +8,46 @@
 import Foundation
 import SwiftUI
 
+let userModel1 = UserModel(id: UUID().uuidString, userID: "1", username: "Ochan", follow: 1, createDate: Date(), image: UIImage(named: "top")!, userColor: Color.red)
+let userModel2 = UserModel(id: UUID().uuidString, userID: "2", username: "Oc", follow: 1, createDate: Date(), image: UIImage(named: "backbround1")!, userColor: Color.blue)
+let userModel3 = UserModel(id: UUID().uuidString, userID: "3", username: "haku", follow: 1, createDate: Date(), image: UIImage(named: "background2")!, userColor: Color.purple)
+
+let day = Date()
+
+
+func getDateString(value: Int) -> String {
+        let date = Calendar.current.date(byAdding: .day, value: value, to:Date())!
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/d"
+        let dateStr = formatter.string(from: date as Date)
+    return dateStr
+}
+
+/*let modifiedDate1 = Calendar.current.date(byAdding: .day, value: 1, to: day)!
+let modifiedDate2 = Calendar.current.date(byAdding: .day, value: 8, to: day)!
+let modifiedDate3 = Calendar.current.date(byAdding: .day, value: 10, to: day)!
+let modifiedDate4 = Calendar.current.date(byAdding: .day, value: 11, to: day)!
+let modifiedDate5 = Calendar.current.date(byAdding: .day, value: 15, to: day)!
+ */
+
+
+
+//let day = Calendar
+  //  .current.dateComponents([.year, .month, .day],
+    //                            from:today)
+
+
+
 let exampleSchedule1 = ScheduleModel(
     id: UUID().uuidString,
     postID: "1",
     userID: "1",
     username: "Ochan",
     title: "食事",
-    date: Date(),
-    numberOfPeople: 10,
-    joinPeople: ["top","top","top","top","top","top","top","top","top","top"],
-    image: UIImage(named: "lunch")!
+    date: getDateString(value: 0),
+    joinPeople: [userModel1,userModel2,userModel1,userModel3,userModel2],
+    image: UIImage(named: "lunch")!,
+    userImage: UIImage(named: "top")!
 )
 
 let exampleSchedule2 = ScheduleModel(
@@ -26,10 +56,10 @@ let exampleSchedule2 = ScheduleModel(
     userID: "2",
     username: "Ochan",
     title: "デート",
-    date: Date(),
-    numberOfPeople: 8,
-    joinPeople: ["backbround1","backbround1","backbround1","backbround1","backbround1","backbround1","backbround1","backbround1"],
-    image: UIImage(named: "hangOut")!
+    date: getDateString(value: 100),
+    joinPeople:[userModel2,userModel2,userModel2,userModel3,userModel2],
+    image: UIImage(named: "hangOut")!,
+    userImage: UIImage(named: "background2")!
 )
 
 let exampleSchedule3 = ScheduleModel(
@@ -38,22 +68,22 @@ let exampleSchedule3 = ScheduleModel(
     userID: "3",
     username: "Ochan",
     title: "映画",
-    date: Calendar.current.date(byAdding: .day, value: 6, to: Date())!,
-    numberOfPeople: 5,
-    joinPeople: ["background2","background2","background2","background2","background2"],
-    image: UIImage(named: "doragon")!
+    date: getDateString(value: 20),
+    joinPeople: [userModel1,userModel2],
+    image: UIImage(named: "doragon")!,
+    userImage: UIImage(named: "backbround1")!
 )
-
+    
 let exampleSchedule4 = ScheduleModel(
     id: UUID().uuidString,
     postID: "4",
     userID: "4",
     username: "Ochan",
     title: "食事",
-    date: Calendar.current.date(byAdding: .day, value: 8, to: Date())!,
-    numberOfPeople: 7,
-    joinPeople: ["top","top","top","top","top","top","top"],
-    image: UIImage(named: "lunch")!
+    date: getDateString(value: 40),
+    joinPeople: [userModel3,userModel2,userModel1,userModel3,userModel2],
+    image: UIImage(named: "lunch")!,
+    userImage: UIImage(named: "background2")!
 )
 
 let exampleSchedule5 = ScheduleModel(
@@ -62,14 +92,17 @@ let exampleSchedule5 = ScheduleModel(
     userID: "5",
     username: "Ochan",
     title: "花火",
-    date: Calendar.current.date(byAdding: .day, value: 20, to: Date())!,
-    numberOfPeople: 2,
-    joinPeople: ["top","top"],
-    image: UIImage(named: "fireworks")!
+    date: getDateString(value: 70),
+    joinPeople: [userModel1],
+    image: UIImage(named: "fireworks")!,
+    userImage: UIImage(named: "top")!
 )
+
+
 
 
 
 var exampleSchedules: [ScheduleModel] {
     return [exampleSchedule1,exampleSchedule2,exampleSchedule3,exampleSchedule4,exampleSchedule5,]
 }
+

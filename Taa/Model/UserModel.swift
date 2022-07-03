@@ -10,13 +10,13 @@ import Foundation
 import SwiftUI
 
 struct UserModel: Identifiable, Hashable{
-    
-    var id = UUID()
+    var id :String
     var userID: String // ID for the user in Database
     var username: String // Username for user in Database
     var follow: Int?
     var createDate: Date
     var image: UIImage
+    var userColor: Color
 
 }
 

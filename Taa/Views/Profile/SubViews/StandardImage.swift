@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct StandardImage: View {
     
     @State var schedule: ScheduleModel
+
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -26,7 +28,7 @@ struct StandardImage: View {
                 VStack(spacing:0){
                     HStack{
                         Spacer()
-                        Text("7/3")
+                        Text(schedule.date)
                             .font(.system(size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -54,7 +56,7 @@ struct StandardImage: View {
                     
                     
                     HStack {
-                        Text("\(schedule.numberOfPeople)")
+                        Text("参加人数:\(schedule.joinPeople.count)")
                             .font(.system(size: 10))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -69,7 +71,7 @@ struct StandardImage: View {
                     ScrollView(.horizontal) {
                         HStack(spacing:0){
                             ForEach(schedule.joinPeople, id: \.self){ people in
-                                Image("\(people)")
+                                Image(uiImage: people.image)
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 35, height: 35)
@@ -77,7 +79,8 @@ struct StandardImage: View {
                                     .cornerRadius(17.5)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 17.5)
-                                            .stroke(Color.red.opacity(1.0), lineWidth: 1)
+                                            .stroke(lineWidth: 1)
+                                            .fill(people.userColor)
                                     )
                             }
                             .padding(.bottom,3)
@@ -97,6 +100,7 @@ struct StandardImage_Previews: PreviewProvider {
     
     static var screen = UIScreen.main.bounds
     static var exampleSchedule = exampleSchedule1
+    
     
     static var previews: some View {
         StandardImage(schedule: exampleSchedule)
