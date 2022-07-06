@@ -18,27 +18,31 @@ struct FavoriteGridView: View {
     ]
     
     var body: some View {
-        VStack {
+        VStack(spacing:10) {
             HStack(spacing:2) {
-                Text("cafe")
-                    .font(.headline)
-                .padding(.leading,16)
                 
-                Image(systemName: "cup.and.saucer")
+                Image(systemName: "cup.and.saucer.fill")
                     .font(.system(size: 14))
                     .padding(.top,2)
+                    .padding(.leading,20)
+                    .padding(.trailing,5)
+                    .foregroundColor(.pink)
+                Text("cafe")
+                    .font(.headline)
                 Spacer()
             }.opacity(0.8)
             
             LazyVGrid(columns: columns) {
                 ForEach(exampleFavorites, id: \.self) { exampleFavorite in
                     FavoriteStandardImage(favorite :exampleFavorite)
-                        .frame(width: screen.width/3 - 10 ,height: screen.width/3 - 10)
-                        .padding(.bottom,18)
+                        .frame(width: screen.width/3 - 30 ,height: screen.width/3 - 30)
+                        .padding(.bottom,30)
                 }
+                //.padding()
             }
             .padding(.horizontal,10)
-            .background(Color(red: 0.956, green: 0.856, blue: 0.698,opacity: 0.2))
+            .background(Color.gray.opacity(0.04))
+//            .background(Color(red: 0.956, green: 0.856, blue: 0.698,opacity: 0.1))
         }
     }
 }

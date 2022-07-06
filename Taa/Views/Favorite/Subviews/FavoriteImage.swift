@@ -14,18 +14,18 @@ struct FavoriteImage: View {
         var body: some View {
                
                     
-                    VStack(spacing:4) {
+                    VStack(spacing:2) {
                         Image(uiImage: favorite.image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: screen.size.width/3.4, height: screen.size.width/3.4)
+                            .frame(width: screen.size.width/4.5, height: screen.size.width/4.5)
                             .clipped()
                             .cornerRadius(5)
                             .overlay(
                                 HStack(spacing:0) {
                                     ForEach(0..<5) {_ in
                                         Image(systemName: "star.fill")
-                                            .font(.system(size: 8))
+                                            .font(.system(size: 6))
                                             .foregroundColor(Color.yellow)
                                     }
                                     
@@ -39,10 +39,10 @@ struct FavoriteImage: View {
                                 HStack(spacing:0) {
                                     Spacer()
                                     Text("東京:")
-                                        .font(.system(size: 6.5))
+                                        .font(.system(size: 6))
                                         .fontWeight(.bold)
                                     Text("18km")
-                                        .font(.system(size: 6.5))
+                                        .font(.system(size: 6))
                                         .fontWeight(.bold)
                                 }
                                     .foregroundColor(Color.white)
@@ -52,7 +52,7 @@ struct FavoriteImage: View {
                         
                         HStack(spacing:0) {
                             Text("竹中食堂")
-                                .font(.footnote)
+                                .font(.system(size: 9))
                                 .foregroundColor(Color.black.opacity(0.4))
                                 .padding(.trailing, 4)
                             
@@ -60,20 +60,21 @@ struct FavoriteImage: View {
                             Spacer()
                             
                             Text("食堂")
-                                .font(.system(size: 8))
+                                .font(.system(size: 5))
                                 .padding(2)
                                 .background(Color.gray.opacity(0.3))
                                 .cornerRadius(3)
                              
                             }
-                        .padding(.horizontal,10)
+                        .frame(width: screen.size.width/4.5)
+//                        .padding(.horizontal,10)
                         
                         
                     }
-                    .frame(width: screen.width/3.2, height: screen.width/3.2 ,alignment: .center)
-                    .padding(.vertical,13)
-                    .padding(.leading,5)
-                    .padding(.trailing,-15)
+                    .frame(width: screen.width/4.5, height: screen.width/3.5 ,alignment: .center)
+                    //.padding(.vertical,5)
+                    //.padding(.leading,5)
+                    //.padding(.trailing,-10)
                     
             }
         }

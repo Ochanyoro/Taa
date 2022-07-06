@@ -17,14 +17,15 @@ struct FavoriteView: View {
     var body: some View {
         VStack(alignment: .leading,spacing: 3) {
             
-            HStack(spacing:2) {
-                Text("cafe")
-                    .font(.headline)
-                .padding(.leading,16)
+            HStack(spacing:5) {
                 
-                Image(systemName: "cup.and.saucer")
+                Image(systemName: "cup.and.saucer.fill")
                     .font(.system(size: 14))
                     .padding(.top,2)
+                    .padding(.leading,16)
+                    .foregroundColor(.pink)
+                Text("cafe")
+                    .font(.headline)
                 Spacer()
             }.opacity(0.8)
             
@@ -34,7 +35,10 @@ struct FavoriteView: View {
                     ForEach(0..<6){ _ in
                         FavoriteImage(favorite: favorite)
                     }
+                    .padding(.leading,7)
                 }
+                .padding(.bottom,5)
+                .padding(.leading, 8)
             }
             .background(Color(red: 0.956, green: 0.856, blue: 0.698,opacity: 0.05))
         }
